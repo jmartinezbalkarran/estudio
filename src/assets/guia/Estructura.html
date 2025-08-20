@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Estudio Bíblico: Arrepentimiento de Obras Muertas</title>
+    <style>
+    	/* --- Estilos del Menú --- */
+        nav {
+            background: #1565c0;
+            padding: 1rem;
+            border-radius: 5px;
+            text-align: center;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 8px rgba(30, 136, 229, 0.2); 
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; 
+            gap: 1rem;
+        }
+
+        nav a {
+            color: #ecf0f1; 
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+            padding: 0.5rem 1rem; 
+            border-radius: 3px; 
+            transition: background-color 0.3s ease, color 0.3s ease; 
+        }
+
+        nav a:hover,
+        nav a:focus {
+            background-color: #4dabf5; 
+            color: #192a56;
+        }
+    
+  /* --- Estilos del body --- */
+        body {
+            font-family: 'Georgia', serif;
+            max-width: 700px;
+            margin: 3rem auto;
+            padding: 0 1.5rem;
+            line-height: 1.8;
+            background: #eff3f6;
+            color: #192a56; 
+            font-size: 18px;
+        }
+
+        h1 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 1.6rem;
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 3rem;
+            background: linear-gradient(90deg,  #4dabf5, #1e88e5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(1.5px 1.5px 3px rgba(0,0,0,0.1));
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            color: #1565c0;
+            border-left: 6px solid #42a5f5;
+            padding-left: 1rem;
+            margin-top: 2.5rem;
+            margin-bottom: 1.2rem;
+            font-weight: 700;
+            font-size: 1.3rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        ul, ol {
+            margin-left: 2rem;
+            color: #424242; 
+            font-size: 1rem;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            font-size: 1rem;
+            color: #37474f; 
+        }
+
+        .section-content {
+            background: #fff; 
+            padding: 2rem 2.5rem;
+            border-radius: 10px;
+            box-shadow: 0 6px 18px rgba(30, 136, 229, 0.15); 
+            margin-bottom: 2.5rem;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .section-content:hover {
+            box-shadow: 0 8px 24px rgba(66, 165, 245, 0.3); 
+        }
+
+        .question {
+            font-weight: 700;
+            margin-top: 1.2rem;
+            cursor: pointer;
+            color: #1e88e5;
+            user-select: none;
+            position: relative;
+            padding-right: 25px;
+            font-size: 1.05rem;
+            transition: color 0.3s ease;
+        }
+
+        .question:hover {
+            color: #42a5f5;
+        }
+
+        .question::after {
+            content: '▼';
+            position: absolute;
+            right: 0;
+            font-size: 0.9rem;
+            color: #1976d2;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .question.expanded::after {
+            transform: rotate(-180deg);
+            color: #1e88e5;
+        }
+
+        .answer {
+            display: none;
+            margin-top: 0.6rem;
+            margin-left: 1.2rem;
+            color: #546e7a; 
+            font-style: italic;
+            white-space: pre-line;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+/* --- Estilos del footer --- */
+        footer {
+        	background: #1565c0;
+            padding: 1rem;
+            border-radius: 5px;
+            text-align: center;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 8px rgba(30, 136, 229, 0.2); 
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; 
+            gap: 1rem;
+        }
+       footer p{
+       	  color: #ecf0f1; 
+            font-weight: bold;
+            padding: 0.5rem 1rem; 
+            border-radius: 3px; 
+            transition: background-color 0.3s ease, color 0.3s ease; 
+       }
+</style>
+
+</head>
+<body>
+<!-----‐-‐-----------header--------------------------------->	
+    <nav>
+        <a href="#tema1">Fe en Dios</a>    
+    </nav>
+<!-----‐-‐-------------body-------------------------------------->
+    <section id="tema1"> <h1>Fe en Dios</h1>
+        <div class="section-content">
+            <h2>Definición bíblica</h2>
+                <p>
+                    Descripción 
+                </p>
+        </div>
+
+        <div class="section-content">
+            <h2>Lecturas clave</h2>
+            
+            <div class="question">
+                Cita Bibliaca 
+            </div>
+            <div class="answer">
+            descripción 
+            </div>
+        </div>
+
+        <div class="section-content">
+            <h2>Preguntas para reflexionar</h2>
+            
+            <div class="question">
+                ¿Preguntas?
+            </div>
+            <div class="answer">
+              Descripción 
+            </div>
+            
+        </div>
+
+        <div class="section-content">
+            <h2>Aplicación práctica</h2>
+            <div class="question">  
+                ¿Preguntas?
+            </div>
+            <div class="answer">
+                Descripción 
+            </div>
+        </div>
+
+    </section>
+<!-----‐-‐-------------footer------------------------------------>
+  <footer>
+    <p>Estudios Bíblicos<br>
+Casa Profética Es la Respuesta<br>
+ @~C.P.J.E.R~@</p>
+  </footer>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const menuLinks = document.querySelectorAll('nav a');
+    const sections = document.querySelectorAll('section');
+    const questions = document.querySelectorAll('.question');
+
+    // Función para ocultar todas las secciones
+    function hideAllSections() {
+        sections.forEach(section => {
+            section.style.display = 'none';
+        });
+    }
+
+    // Función para mostrar una sección específica
+    function showSection(id) {
+        const targetSection = document.getElementById(id);
+        if (targetSection) {
+            hideAllSections();
+            targetSection.style.display = 'block'; // Usamos 'block' para que ocupe el espacio completo
+        }
+    }
+
+    // Inicializar: Ocultar todas las secciones y mostrar la primera al cargar
+    hideAllSections();
+    showSection('tema1'); 
+
+    // Manejar clics en los enlaces del menú
+    menuLinks.forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault(); // Previene el comportamiento predeterminado del enlace
+            const targetId = this.getAttribute('href').substring(1); // Obtiene el ID sin el '#'
+
+            showSection(targetId);
+
+            // Desplazamiento suave (smooth scroll)
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start' // Asegura que la sección se alinee al inicio de la vista
+                });
+            }
+        });
+    });
+
+    // Manejar clics en las preguntas del acordeón con toggle para abrir/cerrar
+    questions.forEach(question => {
+        question.addEventListener('click', function() {
+            const answer = this.nextElementSibling;
+            const isCurrentlyVisible = answer.style.display === 'block';
+
+            // Cerramos todas las respuestas y removemos la clase 'expanded' de todas las preguntas
+            questions.forEach(q => {
+                q.classList.remove('expanded');
+                if (q.nextElementSibling) {
+                    q.nextElementSibling.style.display = 'none';
+                }
+            });
+
+            // Si la respuesta clickeada estaba cerrada, la abrimos; si estaba abierta, la dejamos cerrada
+            if (!isCurrentlyVisible) {
+                answer.style.display = 'block';
+                this.classList.add('expanded');
+            }
+        });
+    });
+});
+</script>
+</body>
+</html>
