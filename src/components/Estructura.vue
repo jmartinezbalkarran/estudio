@@ -1,7 +1,7 @@
 <template>
     <div><!-----‐-‐-----------header--------------------------------->
         <nav>
-            <a href="#tema1">Fe en Dios</a>
+            <a href="#tema1">Fe en Dios JOSUE</a>
         </nav>
         <!-----‐-‐-------------body-------------------------------------->
         <section id="tema1">
