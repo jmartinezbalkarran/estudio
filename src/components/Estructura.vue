@@ -1,52 +1,48 @@
 <template>
     <div><!-----‐-‐-----------header--------------------------------->
+       <button id="btnFlotante">+</button>
         <nav>
-            <a href="#tema1">Fe en Dios</a>
+            <a href="#tema1" id="navLink1">Fe en Dios</a>
         </nav>
         <!-----‐-‐-------------body-------------------------------------->
-        <section id="tema1">
-            <h1>Fe en Dios</h1>
-            <div class="section-content">
-                <h2>Definición bíblica</h2>
-                <p>
-                    Descripción
-                </p>
-            </div>
+     <section id="tema1"> 
+        <h1 id="mainTitle">Fe en Dios</h1>
+        <div class="section-content">
+            <h2>Definición bíblica</h2>
+                <p id="definicion"></p>
+        </div>
 
-            <div class="section-content">
-                <h2>Lecturas clave</h2>
-
-                <div class="question">
-                    Cita Bibliaca
-                </div>
-                <div class="answer">
-                    descripción
+        <div class="section-content">
+            <h2>Lecturas clave</h2>
+            <div id="lecturasClaveContainer">
+                <div class="item-group">
+                    <div class="question" id="cita1"></div>
+                    <div class="answer" id="versiculo1"></div>
                 </div>
             </div>
+        </div>
 
-            <div class="section-content">
-                <h2>Preguntas para reflexionar</h2>
-
-                <div class="question">
-                    ¿Preguntas?
-                </div>
-                <div class="answer">
-                    Descripción
-                </div>
-
-            </div>
-
-            <div class="section-content">
-                <h2>Aplicación práctica</h2>
-                <div class="question">
-                    ¿Preguntas?
-                </div>
-                <div class="answer">
-                    Descripción
+        <div class="section-content">
+            <h2>Preguntas para reflexionar</h2>
+            <div id="preRefContainer">
+                <div class="item-group">
+                    <div class="question" id="preguntaRef1"></div>
+                    <div class="answer" id="respuestaRef1"></div>
                 </div>
             </div>
+        </div>
 
-        </section>
+        <div class="section-content">
+            <h2>Aplicación práctica</h2>
+            <div id="aplicacionContainer">
+                <div class="item-group">
+                    <div class="question" id="preguntaApl1"></div>
+                    <div class="answer" id="respuestaApl1"></div>
+                </div>
+            </div>
+        </div>
+
+    </section>
         <!-----‐-‐-------------footer------------------------------------>
         <footer>
             <p>Estudios Bíblicos<br>
@@ -57,70 +53,131 @@
 </template>
 
 <script setup>
-  document.addEventListener('DOMContentLoaded', function() {
-    const menuLinks = document.querySelectorAll('nav a');
-    const sections = document.querySelectorAll('section');
-    const questions = document.querySelectorAll('.question');
-
-    // Función para ocultar todas las secciones
-    function hideAllSections() {
-        sections.forEach(section => {
-            section.style.display = 'none';
+  document.addEventListener('DOMContentLoaded', () => {
+            addLecturaClave();
+            addPreRef();
+            addAplicacion();
         });
-    }
 
-    // Función para mostrar una sección específica
-    function showSection(id) {
-        const targetSection = document.getElementById(id);
-        if (targetSection) {
-            hideAllSections();
-            targetSection.style.display = 'block'; // Usamos 'block' para que ocupe el espacio completo
+        let lecturaClaveCount = 0;
+        
+        function addLecturaClave() {
+            lecturaClaveCount++;
+            const container = document.getElementById('lecturasClaveContainer');
+            const div = document.createElement('div');
+            div.className = 'item-group';
+            div.innerHTML = `
+                <h3>Cita ${lecturaClaveCount}</h3>
+                <div class="form-group">
+                    <label>Cita:</label>
+                    <input type="text" class="cita" placeholder="Ej: Hebreos 11:1">
+                </div>
+                <div class="form-group">
+                    <label>Versículo:</label>
+                    <textarea class="versiculo" rows="2" placeholder="Es, pues, la fe la certeza de lo que se espera..."></textarea>
+                </div>
+                <button type="button" class="remove-button" onclick="this.closest('.item-group').remove()">Eliminar</button>
+            `;
+            container.appendChild(div);
         }
-    }
 
-    // Inicializar: Ocultar todas las secciones y mostrar la primera al cargar
-    hideAllSections();
-    showSection('tema1'); 
+        let preRefCount = 0;
+        function addPreRef() {
+            preRefCount++;
+            const container = document.getElementById('preRefContainer');
+            const div = document.createElement('div');
+            div.className = 'item-group';
+            div.innerHTML = `
+                <h3>Pregunta de Reflexión ${preRefCount}</h3>
+                <div class="form-group">
+                    <label>Pregunta:</label>
+                    <input type="text" class="pregunta-pre-ref" placeholder="Ej: ¿Qué significa tener fe?">
+                </div>
+                <div class="form-group">
+                    <label>Respuesta:</label>
+                    <textarea class="respuesta-pre-ref" rows="2" placeholder="Significa confiar plenamente en Dios..."></textarea>
+                </div>
+                <button type="button" class="remove-button" onclick="this.closest('.item-group').remove()">Eliminar</button>
+            `;
+            container.appendChild(div);
+        }
 
-    // Manejar clics en los enlaces del menú
-    menuLinks.forEach(link => {
-        link.addEventListener('click', function(event) {
-            event.preventDefault(); // Previene el comportamiento predeterminado del enlace
-            const targetId = this.getAttribute('href').substring(1); // Obtiene el ID sin el '#'
+        let aplicacionCount = 0;
+        function addAplicacion() {
+            aplicacionCount++;
+            const container = document.getElementById('aplicacionContainer');
+            const div = document.createElement('div');
+            div.className = 'item-group';
+            div.innerHTML = `
+                <h3>Aplicación Práctica ${aplicacionCount}</h3>
+                <div class="form-group">
+                    <label>Pregunta:</label>
+                    <input type="text" class="pregunta-aplicacion" placeholder="Ej: ¿Cómo puedo aplicar la fe en mi vida diaria?">
+                </div>
+                <div class="form-group">
+                    <label>Respuesta:</label>
+                    <textarea class="respuesta-aplicacion" rows="2" placeholder="Tomando decisiones basadas en la confianza en Dios..."></textarea>
+                </div>
+                <button type="button" class="remove-button" onclick="this.closest('.item-group').remove()">Eliminar</button>
+            `;
+            container.appendChild(div);
+        }
 
-            showSection(targetId);
+        function collectFormData() {
+            const navTitulo = document.getElementById('navTitulo').value;
+            const definicion = document.getElementById('definicion').value;
 
-            // Desplazamiento suave (smooth scroll)
-            const targetElement = document.getElementById(targetId);
-            if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start' // Asegura que la sección se alinee al inicio de la vista
-                });
-            }
+            const lecturasClave = Array.from(document.querySelectorAll('#lecturasClaveContainer .item-group')).map(item => ({
+                cita: item.querySelector('.cita').value,
+                versiculo: item.querySelector('.versiculo').value
+            })).filter(item => item.cita || item.versiculo); // Filtrar vacíos
+
+            const preRef = Array.from(document.querySelectorAll('#preRefContainer .item-group')).map(item => ({
+                pregunta: item.querySelector('.pregunta-pre-ref').value,
+                respuesta: item.querySelector('.respuesta-pre-ref').value
+            })).filter(item => item.pregunta || item.respuesta);
+
+            const aplicacion = Array.from(document.querySelectorAll('#aplicacionContainer .item-group')).map(item => ({
+                pregunta: item.querySelector('.pregunta-aplicacion').value,
+                respuesta: item.querySelector('.respuesta-aplicacion').value
+            })).filter(item => item.pregunta || item.respuesta);
+            
+           dbData=localStorage.getItem("db_estudio");
+           
+            data = JSON.parse(dbData);
+            const sectionData = {
+                Nav_titulo: navTitulo,
+                Definicion: definicion,
+                Lectura_clave: lecturasClave,
+                Pre_ref: preRef,
+                aplicacion: aplicacion
+            };
+            
+            if (!data) return [sectionData];
+            	
+            data.push(sectionData);
+            return data; 
+            
+// Envuelve en un array como tu estructura JSON
+        }
+
+        document.getElementById('contentForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+         
+            const jsonData = collectFormData();
+            
+            console.log(JSON.stringify(jsonData, null, 2));
+            localStorage.setItem("db_estudio", JSON.stringify(jsonData));
+            window.location.href = 'index.html';
+  alert("Datos guardados en Storage.");
+            
+            alert('Datos del formulario listos en la consola para ser procesados. También puedes verlos en "Previsualizar JSON".');
+            
+            document.getElementById('jsonOutput').textContent = JSON.stringify(jsonData, null, 2);
         });
-    });
 
-    // Manejar clics en las preguntas del acordeón con toggle para abrir/cerrar
-    questions.forEach(question => {
-        question.addEventListener('click', function() {
-            const answer = this.nextElementSibling;
-            const isCurrentlyVisible = answer.style.display === 'block';
-
-            // Cerramos todas las respuestas y removemos la clase 'expanded' de todas las preguntas
-            questions.forEach(q => {
-                q.classList.remove('expanded');
-                if (q.nextElementSibling) {
-                    q.nextElementSibling.style.display = 'none';
-                }
-            });
-
-            // Si la respuesta clickeada estaba cerrada, la abrimos; si estaba abierta, la dejamos cerrada
-            if (!isCurrentlyVisible) {
-                answer.style.display = 'block';
-                this.classList.add('expanded');
-            }
-        });
-    });
-});
+        function previewJson() {
+            const jsonData = collectFormData();
+            document.getElementById('jsonOutput').textContent = JSON.stringify(jsonData, null, 2);      
+        }
 </script>
