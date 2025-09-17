@@ -158,26 +158,7 @@
             data.push(sectionData);
             return data; 
             
-// Envuelve en un array como tu estructura JSON
         }
 
-        document.getElementById('contentForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-         
-            const jsonData = collectFormData();
-            
-            console.log(JSON.stringify(jsonData, null, 2));
-            localStorage.setItem("db_estudio", JSON.stringify(jsonData));
-            window.location.href = 'index.html';
-  alert("Datos guardados en Storage.");
-            
-            alert('Datos del formulario listos en la consola para ser procesados. También puedes verlos en "Previsualizar JSON".');
-            
-            document.getElementById('jsonOutput').textContent = JSON.stringify(jsonData, null, 2);
-        });
-
-        function previewJson() {
-            const jsonData = collectFormData();
-            document.getElementById('jsonOutput').textContent = JSON.stringify(jsonData, null, 2);      
-        }
+        
 </script>
