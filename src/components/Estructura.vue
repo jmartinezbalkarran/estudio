@@ -53,24 +53,139 @@
 </template>
 
 <script setup>
-  document.getElementById('contentForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-         
-            const jsonData = collectFormData();
+      document.addEventListener('DOMContentLoaded', function() {
+        
+        let allStudyData = [];
+        
+        const nav = document.querySelector('nav');
+        const mainTitle = document.getElementById('mainTitle');
+        const definicionContainer = document.getElementById('definicion');
+        const lecturasContainer = document.getElementById('lecturasClaveContainer');
+        const preRefContainer = document.getElementById('preRefContainer');
+        const aplicacionContainer = document.getElementById('aplicacionContainer');
+        
+        async function loadDataAndRender() {
+            try {
+            	
+                // IMPORTANT: Replace 'db_estudio.json' with the correct path to your file.
+                // Assuming you will provide the JSON later.
+                
+                const response = await fetch('db_estudio.json');
+                if (!response.ok) {
+                    throw new Error(`Error de red: ${response.statusText}`);
+                }
+               //allStudyData = await response.json();
+            respuesta =localStorage.getItem("db_estudio");
             
-            console.log(JSON.stringify(jsonData, null, 2));
-            localStorage.setItem("db_estudio", JSON.stringify(jsonData));
-            window.location.href = 'index.html';
-  alert("Datos guardados en Storage.");
-            
-            alert('Datos del formulario listos en la consola para ser procesados. También puedes verlos en "Previsualizar JSON".');
-            
-            document.getElementById('jsonOutput').textContent = JSON.stringify(jsonData, null, 2);
-        });
+        allStudyData = JSON.parse(respuesta);
+                    
 
-        function previewJson() {
-            const jsonData = collectFormData();
-            document.getElementById('jsonOutput').textContent = JSON.stringify(jsonData, null, 2);      
+                console.log("Datos cargados exitosamente:", allStudyData);
+                
+                if (allStudyData.length > 0) {
+                    createNavLinks();
+                    renderSection(allStudyData[0]);
+                }
+            } catch (error) {
+                console.error("Hubo un problema al cargar el archivo JSON:", error);
+                
+                definicionContainer.textContent = 'Error al cargar los datos.';
+            }
         }
         
+        function createNavLinks() {
+
+            nav.innerHTML = ''; 
+            
+            allStudyData.forEach((sectionData, index) => {
+                const navLink = document.createElement('a');
+                navLink.textContent = sectionData.Nav_titulo;
+                navLink.href = `#tema${index + 1}`;
+                 
+                navLink.addEventListener('click', (e) => {
+                    e.preventDefault(); 
+                    renderSection(sectionData);
+                });
+                
+                nav.appendChild(navLink);
+            });
+        }
+        
+        function renderSection(data) {
+        
+            mainTitle.textContent = data.Nav_titulo;
+
+            definicionContainer.textContent = data.Definicion;
+
+            lecturasContainer.innerHTML = '';
+            
+            if (data.Lectura_clave && Array.isArray(data.Lectura_clave)) {
+                data.Lectura_clave.forEach(item => {
+                    const itemGroup = document.createElement('div');
+                    itemGroup.className = 'item-group';
+                    itemGroup.innerHTML = `
+                        <div class="question">${item.cita}</div>
+                        <div class="answer">${item.versiculo}</div>
+                    `;
+                    lecturasContainer.appendChild(itemGroup);
+                });
+            }
+
+            preRefContainer.innerHTML = '';
+            
+            if (data.Pre_ref && Array.isArray(data.Pre_ref)) {
+                data.Pre_ref.forEach(item => {
+                    const itemGroup = document.createElement('div');
+                    itemGroup.className = 'item-group';
+                    itemGroup.innerHTML = `
+                        <div class="question">${item.pregunta}</div>
+                        <div class="answer">${item.respuesta}</div>
+                    `;
+                    preRefContainer.appendChild(itemGroup);
+                });
+            }
+
+            aplicacionContainer.innerHTML = '';
+            
+            if (data.aplicacion && Array.isArray(data.aplicacion)) {
+                data.aplicacion.forEach(item => {
+                    const itemGroup = document.createElement('div');
+                    itemGroup.className = 'item-group';
+                    itemGroup.innerHTML = `
+                        <div class="question">${item.pregunta}</div>
+                        <div class="answer">${item.respuesta}</div>
+                    `;
+                    aplicacionContainer.appendChild(itemGroup);
+                });
+            }
+
+            attachAccordionEvents();
+        }
+        
+        function attachAccordionEvents() {
+            const questions = document.querySelectorAll('.question');
+            questions.forEach(question => {
+                question.addEventListener('click', function() {
+                    const answer = this.nextElementSibling;
+                    const isCurrentlyVisible = answer.style.display === 'block';
+
+                    questions.forEach(q => {
+                        q.classList.remove('expanded');
+                        if (q.nextElementSibling) {
+                            q.nextElementSibling.style.display = 'none';
+                        }
+                    });
+
+                    if (!isCurrentlyVisible) {
+                        answer.style.display = 'block';
+                        this.classList.add('expanded');
+                    }
+                });
+            });
+        }
+        document.getElementById('btnFlotante').     addEventListener('click', () => {
+  window.location.href = 'formulario.html';
+});
+        loadDataAndRender();
+    });
 </script>
