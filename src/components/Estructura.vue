@@ -1,6 +1,6 @@
 <template>
     <div><!-----‐-‐-----------header--------------------------------->
-       
+      <button id="btnFlotante">+</button> 
         <nav>
             <a href="#tema1" id="navLink1">Fe en Dios</a>
         </nav>
