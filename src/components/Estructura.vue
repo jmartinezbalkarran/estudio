@@ -184,7 +184,7 @@
             });
         }
         document.getElementById('btnFlotante').     addEventListener('click', () => {
-  window.location.href = 'formulario.html';
+  window.location.href = '';
 });
         loadDataAndRender();
     });
