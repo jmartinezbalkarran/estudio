@@ -2,7 +2,7 @@
     <div><!-----‐-‐-----------header--------------------------------->
       <button id="btnFlotante">+</button> 
         <nav>
-            <a href="#tema1" id="navLink1">Fe en Dios</a>
+            <a href="#tema1" id="navLink1"> en Dios</a>
         </nav>
         <!-----‐-‐-------------body-------------------------------------->
      <section id="tema1"> 
