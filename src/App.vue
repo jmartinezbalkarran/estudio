@@ -3,7 +3,8 @@ import Estructura from './components/Estructura.vue'
 </script>
 
 <template>
-  <h1>Titulo</h1>
+
+  <Estructura/>
 </template>
 
 <style scoped>
