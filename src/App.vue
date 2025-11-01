@@ -4,7 +4,7 @@ import Estructura from './components/Estructura.vue'
 
 <template>
 
-  <h1>Titulo</h1>
+  <HelloWorld/>
 </template>
 
 <style scoped>
