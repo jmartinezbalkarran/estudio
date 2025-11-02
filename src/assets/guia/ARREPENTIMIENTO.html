@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Estudio Bíblico: Arrepentimiento de Obras Muertas</title>
+    <style>
+    	/* --- Estilos del Menú --- */
+        nav {
+            background: #1565c0;
+            padding: 1rem;
+            border-radius: 5px;
+            text-align: center;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 8px rgba(30, 136, 229, 0.2); 
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; 
+            gap: 1rem;
+        }
+
+        nav a {
+            color: #ecf0f1; 
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+            padding: 0.5rem 1rem; 
+            border-radius: 3px; 
+            transition: background-color 0.3s ease, color 0.3s ease; 
+        }
+
+        nav a:hover,
+        nav a:focus {
+            background-color: #4dabf5; 
+            color: #192a56;
+        }
+    
+  /* --- Estilos del body --- */
+        body {
+            font-family: 'Georgia', serif;
+            max-width: 700px;
+            margin: 3rem auto;
+            padding: 0 1.5rem;
+            line-height: 1.8;
+            background: #eff3f6;
+            color: #192a56; 
+            font-size: 18px;
+        }
+
+        h1 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 1.6rem;
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 3rem;
+            background: linear-gradient(90deg,  #4dabf5, #1e88e5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(1.5px 1.5px 3px rgba(0,0,0,0.1));
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            color: #1565c0;
+            border-left: 6px solid #42a5f5;
+            padding-left: 1rem;
+            margin-top: 2.5rem;
+            margin-bottom: 1.2rem;
+            font-weight: 700;
+            font-size: 1.3rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        ul, ol {
+            margin-left: 2rem;
+            color: #424242; 
+            font-size: 1rem;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            font-size: 1rem;
+            color: #37474f; 
+        }
+
+        .section-content {
+            background: #fff; 
+            padding: 2rem 2.5rem;
+            border-radius: 10px;
+            box-shadow: 0 6px 18px rgba(30, 136, 229, 0.15); 
+            margin-bottom: 2.5rem;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .section-content:hover {
+            box-shadow: 0 8px 24px rgba(66, 165, 245, 0.3); 
+        }
+
+        .question {
+            font-weight: 700;
+            margin-top: 1.2rem;
+            cursor: pointer;
+            color: #1e88e5;
+            user-select: none;
+            position: relative;
+            padding-right: 25px;
+            font-size: 1.05rem;
+            transition: color 0.3s ease;
+        }
+
+        .question:hover {
+            color: #42a5f5;
+        }
+
+        .question::after {
+            content: '▼';
+            position: absolute;
+            right: 0;
+            font-size: 0.9rem;
+            color: #1976d2;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .question.expanded::after {
+            transform: rotate(-180deg);
+            color: #1e88e5;
+        }
+
+        .answer {
+            display: none;
+            margin-top: 0.6rem;
+            margin-left: 1.2rem;
+            color: #546e7a; 
+            font-style: italic;
+            white-space: pre-line;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+/* --- Estilos del footer --- */
+        footer {
+        	background: #1565c0;
+            padding: 1rem;
+            border-radius: 5px;
+            text-align: center;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 8px rgba(30, 136, 229, 0.2); 
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; 
+            gap: 1rem;
+        }
+       footer p{
+       	  color: #ecf0f1; 
+            font-weight: bold;
+            padding: 0.5rem 1rem; 
+            border-radius: 3px; 
+            transition: background-color 0.3s ease, color 0.3s ease; 
+       }
+
+</style>
+</head>
+<body>
+    <nav>
+        <a href="#tema1">Fe en Dios</a>    
+        <a href="#tema2">Arrepentimiento</a>
+        <a href="#tema3">Bautismos</a>
+        <a href="#tema4">Ungimiento</a>
+    </nav>
+
+    <section id="tema1"> <h1>Fe en Dios</h1>
+        <div class="section-content">
+            <h2>Definición bíblica</h2>
+            <p>
+                Creer y confiar en Dios como fundamento de la salvación y vida cristiana.
+            </p>
+        </div>
+
+        <div class="section-content">
+            <h2>Lecturas clave</h2>
+            
+            <div class="question">
+                Hebreos 6:1
+            </div>
+            <div class="answer">
+                "Por tanto, dejando ya los rudimentos de la doctrina de Cristo, vamos adelante a la perfección; no echando otra vez el fundamento del arrepentimiento de obras muertas, de la fe en Dios,"
+            </div>
+            
+            <div class="question">
+                Hebreos 11:1 
+            </div>  
+            <div class="answer">
+                "Es, pues, la fe la certeza de lo que se espera, la convicción de lo que no se ve."
+            </div>
+            
+            <div class="question">
+                Efesios 2:8-9
+            </div>    
+            <div class="answer">
+                "Porque por gracia sois salvos por medio de la fe; y esto no de vosotros, pues es don de Dios; no por obras, para que nadie se gloríe."
+            </div>
+            
+            <div class="question">
+                Santiago 2:17
+            </div>    
+            <div class="answer">
+                "Así también la fe, si no tiene obras, es muerta en sí misma."
+            </div>
+            <div class="question">
+                Juan 14:15
+            </div>    
+            <div class="answer">
+                "Si me amáis, guardad mis mandamientos."
+            </div>
+            <div class="question">
+                Filipenses 2:8
+            </div>    
+            <div class="answer">
+                "y estando en la condición de hombre, se humilló a sí mismo, haciéndose obediente hasta la muerte, y muerte de cruz."
+            </div>
+        </div>
+
+        <div class="section-content">
+            <h2>Preguntas para reflexionar</h2>
+            
+            <div class="question">
+                ¿Qué implica tener fe en Dios?
+            </div>
+            <div class="answer">
+                Es creer en la existencia de Dios, en su poder, en su amor y en sus promesas, confiando en que Él es fiel y cumplirá lo que ha prometido.
+
+                -  Hebreos 11:1 define la fe como "la certeza de lo que se espera y la convicción de lo que no se ve". Esto significa que la fe conecta lo visible con lo invisible, permitiéndonos vivir con esperanza y seguridad en medio de la incertidumbre.
+
+                - La fe implica reconocer que Dios es real y que Él recompensa a quienes sinceramente lo buscan y confían en Él.
+
+                - La fe no es solo un sentimiento o creencia pasiva, sino que se manifiesta en obras y acciones que reflejan esa confianza en Dios. Santiago 2:17 dice que "la fe sin obras es muerta", mostrando que la fe verdadera produce cambios y frutos en la vida.
+
+                - La fe es también un motor que impulsa a actuar con esperanza hacia metas que aún no se ven, confiando en que Dios obra en favor de quienes creen.
+
+                - La fe no es algo que podamos generar por nuestra propia fuerza, sino que es un don que Dios concede para que podamos creer y acercarnos a Él.
+
+                - Creer en Jesús como la resurrección y la vida es parte fundamental de la fe, asegurando la victoria sobre la muerte y la esperanza de vida eterna.
+
+                En resumen tener fe en Dios significa confiar plenamente en Él, creer en su existencia y en sus promesas, vivir con esperanza y seguridad en lo invisible, y demostrar esa confianza con obras y obediencia. Es una relación viva y activa que fortalece al creyente en medio de las dificultades y le asegura la victoria espiritual y la vida eterna.
+            </div>
+
+            <div class="question"> 
+                ¿Cómo se relaciona la fe con la obediencia?
+            </div>
+            <div class="answer">
+                La Biblia presenta la fe y la obediencia como dos aspectos inseparables en la vida del creyente. La fe auténtica en Dios naturalmente produce obediencia a sus mandamientos, porque confiar en Él implica aceptar su autoridad y querer vivir conforme a su voluntad.
+
+                - La obediencia es la manifestación práctica de la fe y el amor a Dios. Jesús dijo: "El que me ama, obedecerá mi palabra" (Juan 14:15). Esto muestra que la verdadera fe se expresa en acciones concretas de obediencia, no solo en creencias abstractas.
+
+                - La fe sin obras es muerta, y la obediencia es una obra que nace de la fe. La confianza en Dios impulsa al creyente a seguir sus mandatos, porque reconoce que Él es bueno y digno de confianza. Por eso, la obediencia es una respuesta lógica y natural al amor y la gracia de Dios.
+
+                - Jesús es el ejemplo supremo de fe y obediencia. Él fue "obediente hasta la muerte, y muerte de cruz" (Filipenses 2:8), mostrando que la sumisión a la voluntad del Padre es la expresión máxima de la fe perfecta.
+
+                - La obediencia trae bendición y paz, mientras que la desobediencia aleja de Dios. Vivir en fe implica confiar en que obedecer a Dios es lo mejor para nuestra vida, y esa obediencia abre la puerta a sus bendiciones.
+
+                - La fe activa se traduce en una vida transformada que busca cumplir la voluntad de Dios. No es solo creer en Él, sino vivir conforme a sus enseñanzas, lo que fortalece la relación con Dios y confirma la autenticidad de la fe.
+
+                En resumen, la fe y la obediencia están profundamente conectadas: la fe verdadera en Dios se demuestra y se fortalece a través de la obediencia a sus mandamientos, siendo esta última la evidencia visible del amor y confianza que se tiene en Él.
+            </div>
+
+            <div class="question">
+                ¿Qué ejemplos bíblicos muestran fe verdadera?
+            </div>
+            <div class="answer">
+                La Biblia está llena de relatos de hombres y mujeres que demostraron una fe profunda y activa en Dios. Estos ejemplos nos inspiran y enseñan cómo vivir confiando plenamente en Él.
+
+                - Abel por su fe ofreció a Dios un sacrificio aceptable, mostrando confianza en Dios aun antes de la venida de Cristo. Su fe fue tan notable que, aunque murió, sigue hablando como ejemplo de justicia (Hebreos 11:4).
+
+                - Noé construyó un arca obedeciendo a Dios, aun cuando no había señales visibles de la inundación, demostrando fe en la palabra divina y en la promesa de salvación (Hebreos 11:7).
+
+                - Abraham es uno de los ejemplos más emblemáticos de fe, pues creyó en las promesas de Dios, incluso cuando parecía imposible, y estuvo dispuesto a ofrecer a su hijo Isaac en obediencia (Hebreos 11:8-19).
+
+                - Moisés por fe, dejó la comodidad de Egipto para seguir a Dios y guiar a su pueblo hacia la libertad, confiando en la promesa de Dios a pesar de las dificultades (Hebreos 11:23-29).
+
+                - La mujer con flujo de sangre en el Nuevo Testamento, mostró fe al tocar el manto de Jesús creyendo que sería sanada, y su fe fue recompensada con la sanidad (Lucas 8:43-48).
+
+                - El centurión romano creyó en el poder de Jesús para sanar a su siervo con solo una palabra, demostrando una fe que Jesús mismo elogió (Mateo 8:5-13).
+
+                - El ladrón en la cruz en sus últimos momentos, mostró fe al reconocer a Jesús como Rey y pedir ser recordado, recibiendo la promesa de salvación inmediata (Lucas 23:39-43).
+
+                En resumen, estos ejemplos muestran que la fe implica confianza, obediencia y esperanza en Dios, aun cuando las circunstancias no sean claras o fáciles. La fe activa produce obras y transforma vidas, tal como enseñan las Escrituras. 
+            </div>
+
+        </div>
+
+        <div class="section-content">
+            <h2>Aplicación práctica</h2>
+            <div class="question">  
+                ¿Cómo fortalecer mi fe diariamente? 
+            </div>
+            <div class="answer">
+                Fortalecer la fe es un proceso continuo que requiere intención y práctica diaria. 
+                
+                - La Biblia es la base de la fe. Al leer, estudiar y reflexionar en sus enseñanzas, tu confianza en Dios se fortalece porque conoces mejor quién es Él y sus promesas. La exposición constante a la Palabra alimenta y renueva tu fe.
+
+                - Mantener una comunicación diaria con Dios a través de la oración te ayuda a confiar en Él, a expresar tus necesidades y a escuchar su guía. Como David oraba varias veces al día, tú también puedes cultivar esta relación cercana con Dios.
+
+                - Recordar y reflexionar en cómo Dios ha obrado en tu vida y en la historia bíblica fortalece tu esperanza y confianza, especialmente en momentos difíciles.
+
+                - La fe se fortalece cuando la pones en práctica, por ejemplo, ayudando a otros, actuando con amor y obedeciendo a Dios. Compartir tu fe y servir a los demás también la hace crecer.
+
+                - Estar en contacto con otros que comparten tu fe te anima, te enseña y te sostiene en el camino espiritual.
+
+                - Es normal que la fe fluctúe, pero no debes desanimarte ni rendirte. Dios es fiel y te ayuda a fortalecerla si perseveras.
+
+                En resumen, fortalecer tu fe diariamente implica nutrirte con la Palabra de Dios, mantener una comunicación constante con Él en oración, vivir tu fe con acciones concretas, apoyarte en la comunidad y confiar en su fidelidad aun en las pruebas. Así, tu fe crecerá y se hará firme para enfrentar los desafíos de la vida. 
+            </div>
+        </div>
+
+    </section>
+
+
+    <section id="tema2"> <h1>Arrepentimiento de obras muertas</h1>
+
+        <div class="section-content">
+            <h2>Definición bíblica</h2>
+            <p>Entender qué significa arrepentirse de obras que no producen vida espiritual.</p>
+        </div>
+
+        <div class="section-content">
+            <h2>Lecturas clave</h2>
+            
+            <div class="question">
+                Hebreos 6:1
+            </div>
+            <div class="answer">
+                "Por tanto, dejando ya los rudimentos de la doctrina de Cristo, vamos adelante a la perfección; no echando otra vez el fundamento del arrepentimiento de obras muertas, de la fe en Dios,"
+            </div>
+            
+            <div class="question">
+                Mateo 3:8 
+            </div>  
+            <div class="answer">
+                "Haced, pues, frutos dignos de arrepentimiento,"
+            </div>
+            
+            <div class="question">
+                Hechos 3:19
+            </div>    
+            <div class="answer">
+                "Así que, arrepentíos y convertíos, para que sean borrados vuestros pecados; para que vengan de la presencia del Señor tiempos de refrigerio,"
+            </div>
+            
+        </div>
+
+        <div class="section-content">
+            <h2>Preguntas para reflexionar</h2>
+
+            <div class="question">¿Qué son las "obras muertas"?</div>
+            <div class="answer">
+                Las "obras muertas" en la Biblia se refieren a las acciones o esfuerzos humanos que carecen de valor espiritual o salvación delante de Dios. Estas obras son consideradas "muertas" porque son inútiles para justificar al ser humano ante Dios y no producen vida espiritual verdadera. En esencia, son obras de auto-justicia o intentos de establecer la propia justicia sin la fe en Cristo y su sacrificio redentor.
+
+                Características principales de las obras muertas:
+                - Son obras de nuestras propias manos, es decir, esfuerzos humanos sin la intervención o el poder de Dios.
+                - Se consideran actividades inútiles o sin valor espiritual, que no conducen a la salvación ni a la vida eterna.
+                - Incluyen rituales, formas vacías de religión o intentos de cumplir la ley por sí solos, sin fe genuina en Dios.
+                - Son obras que merecen la muerte espiritual, porque provienen de personas que están "muertas en transgresiones".
+
+                Contexto bíblico relevante:
+                - En Hebreos 9:14, la Biblia llama "obras muertas" a actividades inútiles que no purifican el alma.
+                - Hebreos 6:1 exhorta a dejar las "obras muertas" para avanzar hacia la madurez espiritual en Cristo, alejándose de rituales y formas vacías.
+                - Santiago 2:26 enseña que "la fe sin obras es muerta", indicando que las obras verdaderas deben estar vivificadas por la fe, a diferencia de las obras muertas que carecen de esta vida espiritual.
+
+                En resumen, las obras muertas son aquellas acciones humanas que no están motivadas ni vivificadas por la fe en Cristo y, por tanto, no tienen valor para la salvación ni para agradar a Dios. Son esfuerzos vanos de auto-justificación que deben ser abandonados para vivir una vida espiritual auténtica y fructífera.
+            </div>
+
+            <div class="question">¿Cómo se manifiesta un arrepentimiento genuino?</div>
+            <div class="answer">
+                El arrepentimiento genuino en la Biblia implica un cambio profundo y sincero en la mente, el corazón y la conducta de una persona respecto al pecado. No es solo sentir remordimiento o culpa, sino tomar la firme decisión de apartarse del pecado y volverse a Dios buscando su perdón y transformación.
+
+                Aspectos clave del arrepentimiento genuino:
+                - Tristeza por el pecado y reconocimiento de la necesidad de Jesús: El arrepentimiento comienza con sentirse verdaderamente apenado por haber pecado y reconocer que se necesita a Jesús para la salvación.
+                - Cambio de mentalidad y actitud: La Biblia habla de un cambio de mente (metanoeo) que no solo implica dolor por el error, sino una transformación que lleva a la acción y a un nuevo rumbo en la vida.
+                - Producción de frutos que demuestren el cambio: El arrepentimiento auténtico se evidencia en una vida que produce frutos buenos, es decir, acciones y decisiones que reflejan la nueva dirección y alejamiento del pecado.
+                - Apartarse del pecado y volverse a Dios: No basta con reconocer el error; el arrepentimiento implica un giro real, dejar atrás el pecado y buscar activamente la reconciliación con Dios.
+                - Aceptar y creer en el evangelio: Para que el arrepentimiento sea genuino, es necesario no solo conocer la verdad del evangelio, sino aceptarla y creerla con el corazón, permitiendo que transforme la vida.
+
+                Resumen:
+                Un arrepentimiento genuino según la Biblia es un proceso integral que incluye:
+                - Sentir tristeza por el pecado.
+                - Cambiar la manera de pensar y actuar.
+                - Apartarse del pecado.
+                - Volverse a Dios en busca de perdón.
+                - Manifestar con hechos el cambio interior.
+
+                Este arrepentimiento es esencial para entrar en el Reino de Dios y vivir una vida conforme a su voluntad.
+
+                Relación entre el arrepentimiento y la fe:
+                El arrepentimiento y la fe están estrechamente vinculados en la Biblia, siendo ambos esenciales para la salvación y la vida cristiana. Aunque son actos distintos, se complementan.
+
+                - El arrepentimiento es un cambio de mente, corazón y acciones respecto al pecado, un giro completo y decisivo para apartarse del pecado y volverse a Dios.
+                - La fe es la confianza y entrega en las promesas de Dios en Jesucristo como Salvador, creyendo en su obra redentora y Señorío.
+                - La Biblia enseña que el arrepentimiento conduce a la fe y la fe produce arrepentimiento; son dos caras de la misma moneda en la conversión.
+                - El evangelio llama a ambos: arrepentirse y creer en Jesús.
+                - La salvación es obra de Dios que cambia el corazón para que la persona pueda arrepentirse y tener fe, no es mérito humano sino don divino.
+
+                En resumen, arrepentimiento y fe son inseparables para una verdadera conversión y relación con Dios.
+            </div>
+
+            <div class="question">¿Cuál es la relación entre arrepentimiento y fe?</div>
+            <div class="answer">
+                El arrepentimiento y la fe están estrechamente vinculados en la Biblia, siendo ambos esenciales para la salvación y la vida cristiana. Aunque están relacionados, son actos distintos del alma con propósitos complementarios.
+
+                - El arrepentimiento es un cambio de mente, corazón y acciones respecto al pecado, un giro completo y decisivo para apartarse del pecado y volverse a Dios como Juez. Implica reconocer la propia condición pecaminosa y la necesidad de perdón.
+                - La fe es la confianza y entrega en las promesas de Dios en Jesucristo como Salvador, creyendo en su obra redentora y Señorío. La fe se centra en Jesús y en aceptar su sacrificio para la salvación.
+                - La Biblia enseña que el arrepentimiento conduce a la fe y la fe produce arrepentimiento; son como dos caras de la misma moneda en el proceso de conversión. No se puede separar uno del otro para la salvación genuina.
+                - En el evangelio, el llamado es a ambos: arrepentirse (dejar el pecado) y creer en Jesús (tener fe). Por ejemplo, Lucas 24:47 llama a predicar arrepentimiento y fe a todo el mundo.
+                - Además, la salvación es obra de Dios que atrae, abre los ojos y cambia el corazón para que la persona pueda arrepentirse y tener fe, no es un mérito humano sino un don divino.
+
+                En resumen, el arrepentimiento y la fe son inseparables en la experiencia bíblica de la salvación: el arrepentimiento implica apartarse del pecado y la fe implica confiar en Cristo para recibir perdón y vida nueva. Ambos son necesarios y se complementan para una verdadera conversión y relación con Dios.
+            </div>
+
+        </div>
+
+        <div class="section-content">
+            <h2>Aplicación práctica</h2>
+            <div class="question">  ¿Cómo puedo evidenciar un arrepentimiento verdadero en mi vida?</div>
+            <div class="answer">
+                <li>Cambio de mentalidad y corazón: Un arrepentimiento verdadero implica un cambio profundo en tu manera de pensar y en tu corazón, no solo sentir culpa o remordimiento pasajero. Es reconocer sinceramente que el pecado está mal y que necesitas apartarte de él para buscar a Dios.</li>
+                <li>Apartarse del pecado: La evidencia más clara es que comienzas a alejarte de las conductas y actitudes pecaminosas. No significa que no puedas caer o luchar con el pecado, pero sí que hay un esfuerzo constante y sincero por vivir diferente y no seguir en el mismo patrón.</li>
+                <li>Frutos dignos de arrepentimiento: La Biblia habla de "frutos dignos de arrepentimiento" (Mateo 3:8). Esto quiere decir que tu vida comienza a mostrar cambios visibles: actitudes más humildes, amor hacia los demás, honestidad, paciencia, y otras cualidades que reflejan una transformación interior.</li>
+                <li>Un corazón quebrantado y humilde: Dios valora un espíritu quebrantado, es decir, una actitud humilde y sincera que reconoce la necesidad de su gracia y perdón. Este corazón no se justifica ni se endurece, sino que se abre a la restauración.</li>
+                <li>Persistencia en la lucha contra el pecado: El arrepentimiento verdadero no significa perfección inmediata, sino una lucha continua contra el pecado con la ayuda de Dios. La perseverancia en esta lucha es señal de un arrepentimiento genuino.</li>
+                <li>Transformación progresiva: La vida de una persona arrepentida se va transformando poco a poco, mostrando un crecimiento espiritual y un alejamiento progresivo del pecado y sus consecuencias.</li>
+                <p>En resumen, un arrepentimiento verdadero se evidencia cuando hay un cambio sincero en tu mente y corazón, un alejamiento real del pecado, la producción de frutos que reflejan ese cambio, humildad ante Dios y perseverancia en la lucha espiritual. No es solo sentir culpa, sino vivir una vida transformada que busca agradar a Dios y reflejar su amor.</div>
+        </div>
+    </section >
+
+    <section id="tema3"> <h1>Bautismos</h1>
+        <div class="section-content">
+            <h2>Definición bíblica</h2>
+            <p> 
+                El acto simbólico de inmersión o aspersión que representa la muerte y resurrección con Cristo.
+            </p>
+        </div>
+
+        <div class="section-content">
+            <h2>Lecturas clave</h2>
+            
+            <div class="question">
+                Hebreos 6:2
+            </div>
+            <div class="answer">
+                "de la doctrina de bautismos, de la imposición de manos, de la resurrección de los muertos y del juicio eterno."
+            </div>
+            
+            <div class="question">
+                Mateo 28:19-20 
+            </div>  
+            <div class="answer">
+                "Por tanto, id, y haced discípulos a todas las naciones, bautizándolos en el nombre del Padre, y del Hijo, y del Espíritu Santo; enseñándoles que guarden todas las cosas que os he mandado; y he aquí yo estoy con vosotros todos los días, hasta el fin del mundo. Amén."
+            </div>
+            
+            <div class="question">
+                Romanos 6:3-5
+            </div>    
+            <div class="answer">
+                "¿O no sabéis que todos los que hemos sido bautizados en Cristo Jesús, hemos sido bautizados en su muerte? Porque somos sepultados juntamente con él para muerte por el bautismo, a fin de que como Cristo resucitó de los muertos por la gloria del Padre, así también nosotros andemos en vida nueva. Porque si fuimos plantados juntamente con él en la semejanza de su muerte, así también lo seremos en la de su resurrección;"
+            </div>
+        </div>
+
+        <div class="section-content">
+            <h2>Preguntas para reflexionar</h2>
+            
+            <div class="question">
+                ¿Qué significa el bautismo en la vida del creyente?
+            </div>
+            <div class="answer">
+                
+                El bautismo es un acto simbólico y público que representa la identificación del creyente con la muerte, sepultura y resurrección de Jesucristo. Al ser bautizado, el creyente da testimonio externo de una experiencia interna profunda: su decisión de seguir a Jesús y vivir para Él en obediencia a sus mandatos.
+
+                - Simboliza la muerte al pecado y el comienzo de una nueva vida en Cristo. Romanos 6:4-5 explica que al ser bautizados, los creyentes participan simbólicamente en la muerte y resurrección de Jesús, lo que significa dejar atrás la vida antigua y comenzar una vida nueva en comunión con Él.
+
+                - Es una confesión pública de fe: El bautismo es una manera visible de declarar públicamente que se ha creído en Jesús y se ha decidido seguirlo, mostrando obediencia a su mandato de hacer discípulos y bautizarlos.
+
+                - Es un paso importante en el camino espiritual: No solo es un rito, sino que marca un compromiso serio y una transformación interior que ya ha ocurrido por la fe, y que ahora se expresa externamente mediante el bautismo.
+
+                - Recibir el don del Espíritu Santo: En algunos textos bíblicos, el bautismo está asociado con la recepción del Espíritu Santo, que capacita al creyente para vivir la nueva vida en Cristo.
+
+                En resumen, el bautismo en la vida del creyente es un símbolo poderoso de su unión con Cristo en su muerte y resurrección, una declaración pública de fe y un compromiso de vivir conforme a la voluntad de Dios. Es un paso fundamental que refleja la transformación interior y la nueva identidad en Cristo.
+            </div>
+
+            <div class="question">  
+                ¿Por qué hay plural "bautismos" en Hebreos 6:2?
+            </div>
+            <div class="answer">
+                - En Hebreos 6:2 se menciona la expresión doctrina de "bautismos" en plural, lo cual ha generado diversas interpretaciones. La razón principal de este plural es que no se refiere únicamente al bautismo cristiano como un solo rito, sino a un conjunto o proceso de diferentes "bautismos" o lavamientos rituales que formaban parte de la enseñanza básica para los creyentes, especialmente en un contexto donde algunos destinatarios provenían del judaísmo y estaban familiarizados con varios ritos de purificación.
+
+                - Contexto histórico y cultural: En la época, existían varios tipos de lavamientos o bautismos rituales en la tradición judía, como los lavamientos ceremoniales para purificación (bautismos de limpieza), que eran distintos del bautismo cristiano en agua para la fe en Cristo. El plural "bautismos" puede aludir a estos diferentes ritos o a la enseñanza sobre varios aspectos relacionados con el bautismo y la purificación espiritual.
+
+                - Proceso formativo: Algunos estudios sugieren que la expresión indica un proceso o varias etapas de enseñanza sobre el bautismo, no un solo evento. Es decir, la "doctrina de bautismos" abarca la instrucción sobre diferentes aspectos o tipos de bautismos, incluyendo el bautismo cristiano y otros rituales de purificación que los creyentes debían comprender y dejar atrás para avanzar hacia la madurez espiritual.
+
+                - Enseñanza básica para creyentes: Hebreos 6:1-2 enumera varios fundamentos de la doctrina cristiana que los creyentes deben conocer y superar para crecer, y la "doctrina de bautismos" en plural forma parte de esos rudimentos, indicando que se trata de un tema amplio y complejo, no solo un bautismo singular.
+
+                En resumen, el plural "bautismos" en Hebreos 6:2 refleja la en señanza sobre varios tipos o aspectos de bautismos y lavamientos rituales, tanto judíos como cristianos, que formaban parte de la instrucción básica para los creyentes, y que debían comprender y superar para avanzar en la madurez espiritual.
+            </div>
+
+            <div class="question">
+                ¿Cuál es la relación entre bautismo y fe?
+            </div>
+            <div class="answer">
+                El bautismo y la fe están íntimamente relacionados en la experiencia cristiana, siendo la fe el fundamento necesario para que el bautismo tenga significado y valor espiritual.
+
+                - La fe precede al bautismo: Según la Biblia, el bautismo es un acto que sigue a la fe en Jesucristo. Es decir, primero la persona debe creer en Jesús como Salvador y Señor, y luego, como expresión externa de esa fe, se bautiza. El bautismo es la manifestación pública y simbólica de la fe que ya se ha recibido en el corazón.
+
+                - El bautismo es una expresión visible de la fe: El bautismo no salva por sí mismo, sino que es el símbolo externo que muestra la dedicación sincera y la confianza en Cristo. Es una confesión pública de la fe que la persona ha hecho en su interior.
+
+                - Simboliza la unión con Cristo en su muerte y resurrección: La fe en Jesús implica identificarse con Él, y el bautismo representa esa unión simbólica con la muerte, sepultura y resurrección de Cristo, mostrando que el creyente muere al pecado y resucita a una nueva vida en Él.
+
+                - Es un mandato para los creyentes: La Biblia enseña que todos los que creen deben ser bautizados como parte del discipulado y obediencia a la enseñanza de Jesús, haciendo visible la fe que profesan.
+
+                - No es un requisito para la salvación, sino una respuesta a la fe: La salvación es por gracia mediante la fe en Cristo, no por obras ni rituales, incluyendo el bautismo. Sin embargo, el bautismo es un paso importante que sigue a la fe y confirma el compromiso del creyente.
+
+                En resumen, la fe es el fundamento interno y personal que hace que el bautismo tenga sentido; el bautismo es la expresión externa y pública de esa fe, simbolizando la muerte al pecado y la nueva vida en Cristo. Ambos están unidos en la experiencia de la conversión y el discipulado cristiano.
+            </div>
+
+        </div>
+
+        <div class="section-content">
+            <h2>Aplicación práctica</h2>
+            <div class="question">  
+                ¿Cuál es el significado personal del bautismo para nosotros?  
+            </div>
+            <div class="answer">
+                El bautismo, desde una perspectiva personal, es mucho más que un rito o ceremonia; es una declaración personal y profunda de tu fe y compromiso con Dios.
+
+                - Un símbolo visible de tu nueva vida en Cristo. Al ser bautizado, estás mostrando públicamente que has decidido morir al pecado y vivir una vida renovada, siguiendo el ejemplo de Jesús en su muerte y resurrección. Es una forma de decir: "He dejado atrás mi vida antigua y comienzo una vida nueva con Cristo".
+
+                - Una expresión de obediencia a la enseñanza de Jesús. El bautismo es un mandato para quienes creen en Él, y al bautizarte, estás respondiendo con obediencia a ese llamado, demostrando que tu fe no es solo interna, sino que también se manifiesta en acciones concretas.
+
+                - Un testimonio público de tu arrepentimiento y fe. El bautismo declara ante otros que has reconocido tu necesidad de perdón, te has arrepentido y has puesto tu confianza en Jesús para la salvación.
+
+                - Una experiencia que simboliza la recepción del Espíritu Santo y la incorporación a la familia de Dios. A través del bautismo, simbolizas que Dios te ha adoptado como hijo o hija, y que el Espíritu Santo habita en ti para guiarte y fortalecerte en tu caminar cristiano.
+
+                En resumen, el bautismo es un acto significativo que refleja tu compromiso personal con Dios, tu fe viva en Jesucristo, y tu deseo de vivir conforme a su voluntad, siendo parte activa de la comunidad de creyentes. Es un paso que marca un antes y un después en tu vida espiritual, lleno de esperanza y renovación.
+            </div>        
+        </div>
+    </section>
+
+    <section id="tema4"> <h1>Imposición de manos</h1>
+        <div class="section-content">
+            <h2>Definición bíblica</h2>
+            <p> 
+                Acto simbólico para impartir bendición, autoridad, o dones espirituales.
+            </p>
+        </div>
+
+        <div class="section-content">
+            <h2>Lecturas clave</h2>
+            
+            <div class="question">
+                Hebreos 6:2
+            </div>
+            <div class="answer">
+                "de la doctrina de bautismos, de la imposición de manos, de la resurrección de los muertos y del juicio eterno."
+            </div>
+        
+            <div class="question">
+                Marcos 16:18
+            </div>
+            <div class="answer">
+                "tomarán en las manos serpientes, y si bebieren cosa mortífera, no les hará daño; sobre los enfermos pondrán sus manos, y sanarán."
+            </div>
+            
+            <div class="question">
+                Hechos 8:17
+            </div>  
+            <div class="answer">
+                "Entonces les imponían las manos, y recibían el Espíritu Santo."
+            </div>
+            
+            <div class="question">
+                1 Timoteo 4:14
+            </div>  
+            <div class="answer">
+                "No descuides el don que hay en ti, que te fue dado mediante profecía con la imposición de las manos del presbiterio."
+            </div>
+            
+            <div class="question">
+                Hechos 19:6
+            </div>
+            <div class="answer">
+                "Y habiéndoles impuesto Pablo las manos, vino sobre ellos el Espíritu Santo; y hablaban en lenguas, y profetizaban."
+            </div>
+            
+            <div class="question">
+                Hechos 6:6
+            </div>  
+            <div class="answer">
+                "a los cuales presentaron ante los apóstoles, quienes, orando, les impusieron las manos."
+            </div>
+            
+            <div class="question">
+                Hechos 13:3
+            </div>  
+            <div class="answer">
+                "Entonces, habiendo ayunado y orado, les impusieron las manos y los despidieron."
+            </div>
+        </div>
+            
+        <div class="section-content">
+            <h2>Preguntas para reflexionar</h2>
+            
+            <div class="question">
+                ¿Cuál es el propósito de la imposición de manos?
+            </div>
+            <div class="answer">
+                La imposición de manos es un acto simbólico con varios propósitos espirituales importantes:
+
+                - En el Nuevo Testamento, la imposición de manos es usada para que los creyentes reciban el Espíritu Santo. Por ejemplo, en Hechos 8:17 y Hechos 19:6, cuando los apóstoles imponían las manos sobre los nuevos creyentes, ellos recibían el Espíritu Santo y manifestaban dones espirituales como hablar en lenguas y profetizar.
+
+                - La imposición de manos también se utiliza para impartir bendiciones o autoridad espiritual. Es un gesto que simboliza la conexión espiritual con Dios y la transmisión de poder o responsabilidad para un ministerio o tarea específica.
+
+                - En varios pasajes, la imposición de manos se emplea para consagrar o designar a personas para un servicio especial dentro de la comunidad de fe, como la ordenación de líderes o ministros (por ejemplo, Hechos 6:6; Hechos 13:3).
+
+                - En algunos casos, la imposición de manos se asocia con la sanidad física o espiritual, como un medio por el cual Dios obra para restaurar a la persona.
+
+                En resumen, la imposición de manos es un acto simbólico que representa la transmisión del Espíritu Santo, la bendición, la autoridad espiritual, la consagración para un ministerio y, en ocasiones, la sanación, estableciendo una conexión espiritual entre Dios y la persona sobre la cual se imponen las manos.
+            </div>
+
+            <div class="question">  
+                ¿Qué ejemplos bíblicos muestran su uso?
+            </div>
+            <div class="answer">
+                La Biblia registra varios momentos en que la imposición de manos se utiliza con propósitos espirituales importantes. 
+
+                - Hechos 8:17: Cuando los apóstoles Pedro y Juan impusieron las manos sobre los nuevos creyentes en Samaria, ellos recibieron el Espíritu Santo. Esto muestra que la imposición de manos era un medio para transmitir el Espíritu y confirmar la fe de los nuevos discípulos.
+
+                - Hechos 19:6: Pablo impuso las manos sobre algunos discípulos en Éfeso, y ellos recibieron el Espíritu Santo, manifestando dones espirituales como hablar en lenguas y profetizar.
+
+                - Hechos 6:6: Los apóstoles impusieron las manos sobre los siete diáconos que fueron elegidos para servir en la iglesia, consagrándolos para ese ministerio específico.
+
+                - Hechos 13:3: La iglesia en Antioquía impuso las manos sobre Bernabé y Saulo (Pablo) para enviarlos en una misión especial, otorgándoles autoridad y bendición para su obra misionera.
+
+                - Marcos 16:18: Jesús enseñó que los creyentes impondrían manos para sanar a los enfermos, indicando que la imposición de manos también está relacionada con la sanidad.
+
+                Estos ejemplos muestran que la imposición de manos en la Biblia tiene un significado profundo como transmitir el Espíritu Santo, conferir autoridad o bendición, consagrar para el ministerio y, en ocasiones, para la sanidad física o espiritual. Es un acto que simboliza la conexión espiritual y la acción de Dios a través de sus siervos.
+            </div>
+
+            <div class="question">
+                ¿Cómo se relaciona con la autoridad espiritual?
+            </div>
+            <div class="answer">
+                La imposición de manos está estrechamente vinculada con la transmisión y reconocimiento de la autoridad espiritual en la comunidad cristiana. Este acto simboliza que Dios otorga poder, bendición y responsabilidad a una persona para cumplir un ministerio o tarea específica dentro de la iglesia.
+
+                - Cuando se imponen las manos, se está reconociendo que la persona recibe una autoridad especial dada por Dios para liderar, enseñar o servir. Esto se ve en la ordenación de líderes y ministros, donde la imposición de manos es el medio para conferir esa autoridad espiritual que debe ejercerse con fe y obediencia a Dios.
+
+                - La imposición de manos también implica una investidura de poder espiritual para la vida y el ministerio, como se observa en el bautismo del Espíritu Santo que capacita a los creyentes para ejercer dones espirituales y cumplir con la misión que Dios les ha encomendado.
+
+                - Este acto no solo es un símbolo externo, sino que representa la confirmación divina de que la persona está autorizada para actuar en nombre de Dios, y la comunidad reconoce esa autoridad para que la persona pueda guiar y servir con respaldo espiritual.
+
+                En resumen, la imposición de manos es un acto bíblico que establece y confirma la autoridad espiritual otorgada por Dios a ciertos individuos, capacitándolos y autorizándolos para ejercer liderazgo, ministerio y servicio dentro de la iglesia, siempre fundamentado en la fe y la obediencia a Dios.
+            </div>
+
+        </div>
+
+        <div class="section-content">
+            <h2>Aplicación práctica</h2>
+            <div class="question">  
+                ¿Cómo se practica hoy y qué significado tiene?  
+            </div>
+            <div class="answer">
+                Hoy en día, la imposición de manos sigue siendo una práctica importante en muchas comunidades cristianas, manteniendo su profundo significado espiritual y simbólico basado en la Biblia.
+
+                - Se utiliza principalmente en ceremonias de ordenación o consagración de líderes, pastores y ministros, para reconocer y confirmar la autoridad espiritual que Dios les otorga para servir a la comunidad. También se emplea en momentos de oración por sanidad, bendición o para impartir el Espíritu Santo a creyentes, siguiendo el ejemplo de la iglesia primitiva.
+
+                - La imposición de manos hoy simboliza la transmisión de bendición, autoridad y poder espiritual. Es un gesto visible que expresa la comunión y solidaridad entre los creyentes, y la acción de Dios a través de sus siervos. Representa la conexión espiritual y la entrega de responsabilidades o dones para el servicio cristiano.
+
+                - Más allá del gesto físico, la imposición de manos es un acto de fe que reconoce la obra de Dios en la vida de la persona y la comunidad. Es un momento de oración intensa y expectativa de que Dios actúe, ya sea para sanar, fortalecer, bendecir o capacitar para un ministerio.
+
+                - Esta práctica mantiene la tradición bíblica que se remonta a Moisés y Josué, pasando por los apóstoles y la iglesia primitiva, y sigue siendo un símbolo poderoso de la presencia y el poder de Dios en la vida de los creyentes.
+
+                En resumen, la imposición de manos hoy es un acto litúrgico y espiritual que representa la bendición, la autoridad y la comunión en la iglesia, un medio por el cual Dios confirma y capacita a sus siervos para cumplir su propósito en la comunidad de fe. Es una práctica que une la tradición bíblica con la experiencia viva de la fe cristiana contemporánea. 
+            </div>
+        </div>
+    </section>
+  <footer>
+    <p>Estudios Bíblicos<br>
+Casa Profética Es la Respuesta<br>
+ @~C.P.J.E.R~@</p>
+  </footer>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const menuLinks = document.querySelectorAll('nav a');
+    const sections = document.querySelectorAll('section');
+    const questions = document.querySelectorAll('.question');
+
+    // Función para ocultar todas las secciones
+    function hideAllSections() {
+        sections.forEach(section => {
+            section.style.display = 'none';
+        });
+    }
+
+    // Función para mostrar una sección específica
+    function showSection(id) {
+        const targetSection = document.getElementById(id);
+        if (targetSection) {
+            hideAllSections();
+            targetSection.style.display = 'block'; // Usamos 'block' para que ocupe el espacio completo
+        }
+    }
+
+    // Inicializar: Ocultar todas las secciones y mostrar la primera al cargar
+    hideAllSections();
+    showSection('tema1'); 
+
+    // Manejar clics en los enlaces del menú
+    menuLinks.forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault(); // Previene el comportamiento predeterminado del enlace
+            const targetId = this.getAttribute('href').substring(1); // Obtiene el ID sin el '#'
+
+            showSection(targetId);
+
+            // Desplazamiento suave (smooth scroll)
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start' // Asegura que la sección se alinee al inicio de la vista
+                });
+            }
+        });
+    });
+
+    // Manejar clics en las preguntas del acordeón con toggle para abrir/cerrar
+    questions.forEach(question => {
+        question.addEventListener('click', function() {
+            const answer = this.nextElementSibling;
+            const isCurrentlyVisible = answer.style.display === 'block';
+
+            // Cerramos todas las respuestas y removemos la clase 'expanded' de todas las preguntas
+            questions.forEach(q => {
+                q.classList.remove('expanded');
+                if (q.nextElementSibling) {
+                    q.nextElementSibling.style.display = 'none';
+                }
+            });
+
+            // Si la respuesta clickeada estaba cerrada, la abrimos; si estaba abierta, la dejamos cerrada
+            if (!isCurrentlyVisible) {
+                answer.style.display = 'block';
+                this.classList.add('expanded');
+            }
+        });
+    });
+});
+</script>
+</body>
+</html>
