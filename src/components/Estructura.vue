@@ -8,7 +8,7 @@
       +
     </router-link> 
         <nav>
-            <a href="#tema1" id="navLink1">Fe en Dios</a>
+            <a href="#tema1" id="navLink1">amor en Dios</a>
         </nav>
         <!-----‐-‐-------------body-------------------------------------->
      <section id="tema1"> 
