@@ -1,6 +1,12 @@
 <template>
     <div><!-----‐-‐-----------header--------------------------------->
-      <button id="btnFlotante">+</button> 
+      <router-link 
+      to="/helloworld" 
+      id="btnFlotante"
+      class="btn-flotante"
+    >
+      +
+    </router-link> 
         <nav>
             <a href="#tema1" id="navLink1">Fe en Dios</a>
         </nav>
@@ -183,9 +189,7 @@
                 });
             });
         }
-        document.getElementById('btnFlotante').     addEventListener('click', () => {
-  window.location.href = '/form';
-});
+        
         loadDataAndRender();
     });
 </script>
