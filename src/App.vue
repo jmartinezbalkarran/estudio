@@ -3,7 +3,9 @@ import Estructura from './components/Estructura.vue'
 </script>
 
 <template>
-  <Estructura/>
+
+  <h1>hola</h1>
+
 </template>
 
 <style scoped>
