@@ -1,12 +1,10 @@
 <template>
     <div><!-----‐-‐-----------header--------------------------------->
       <router-link 
-      to="/helloworld" 
+      to="/add" 
       id="btnFlotante"
       class="btn-flotante"
-    >
-      +
-    </router-link> 
+    >+</router-link> 
         <nav>
             <a href="#tema1" id="navLink1">Fe en Dios</a>
         </nav>
@@ -59,8 +57,32 @@
 </template>
 
 <script setup>
-      document.addEventListener('DOMContentLoaded', function() {
+      import { initializeApp } from 'https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js';
+        import { 
+            getFirestore, 
+            collection, 
+            addDoc, 
+            getDocs 
+        } from 'https://www.gstatic.com/firebasejs/11.0.2/firebase-firestore.js';
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyDq8savWb-t4hfoZ8Q7XQf_l0kIESyAwmA",
+            authDomain: "estudiosbiblicos-cpjr.firebaseapp.com",
+            projectId: "estudiosbiblicos-cpjr",
+            storageBucket: "estudiosbiblicos-cpjr.firebasestorage.app",
+            messagingSenderId: "622848730929",
+            appId: "1:622848730929:web:13fd5af5f51a9f5b5a3210",
+            measurementId: "G-FMKCZZ09HW"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
         
+        // Hacer disponibles solo lo necesario
+        window.db = db;
+        window.firestore = { collection, addDoc, getDocs };
+        
+        document.addEventListener('DOMContentLoaded', function() {
         let allStudyData = [];
         
         const nav = document.querySelector('nav');
@@ -69,27 +91,26 @@
         const lecturasContainer = document.getElementById('lecturasClaveContainer');
         const preRefContainer = document.getElementById('preRefContainer');
         const aplicacionContainer = document.getElementById('aplicacionContainer');
-        
-        async function loadDataAndRender() {
+        async function
+        loadDataAndRender() {
+   
             try {
             	
                 // IMPORTANT: Replace 'db_estudio.json' with the correct path to your file.
                 // Assuming you will provide the JSON later.
                 
-                const response = await fetch('db_estudio.json');
+               const response = await fetch('db_estudio.json');
                 if (!response.ok) {
                     throw new Error(`Error de red: ${response.statusText}`);
                 }
-               //allStudyData = await response.json();
-            respuesta =localStorage.getItem("db_estudio");
+               
+            const allStudyData = await getStudies();
             
-        allStudyData = JSON.parse(respuesta);
-                    
-
                 console.log("Datos cargados exitosamente:", allStudyData);
                 
                 if (allStudyData.length > 0) {
-                    createNavLinks();
+            
+                    createNavLinks(allStudyData);
                     renderSection(allStudyData[0]);
                 }
             } catch (error) {
@@ -99,11 +120,11 @@
             }
         }
         
-        function createNavLinks() {
+        function createNavLinks(study) {
 
             nav.innerHTML = ''; 
             
-            allStudyData.forEach((sectionData, index) => {
+            study.forEach((sectionData, index) => {
                 const navLink = document.createElement('a');
                 navLink.textContent = sectionData.Nav_titulo;
                 navLink.href = `#tema${index + 1}`;
@@ -116,6 +137,25 @@
                 nav.appendChild(navLink);
             });
         }
+        
+        async function getStudies() {
+            try {
+            	
+                const querySnapshot = await window.firestore.getDocs(window.firestore.collection(window.db, "studies"));
+                const study = [];      
+                    querySnapshot.forEach((doc) => {
+                   
+                   study.push(doc.data().content);
+               
+                }); 
+                return study;
+            } catch (error) {
+                alert('Error al obtener estudios: ' + error.message);
+            }
+        }
+        
+        
+        
         
         function renderSection(data) {
         
@@ -189,7 +229,6 @@
                 });
             });
         }
-        
         loadDataAndRender();
     });
 </script>

@@ -1,17 +1,17 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Estructura from '../components/Estructura.vue'
-import HelloWorld from '../components/HelloWorld.vue'
+import Home from '../components/Home.vue'
+import Add from '../components/Add.vue'
 
 const routes = [
   {
     path: '/',
-    name: 'Estructura',
-    component: Estructura
+    name: 'Home',
+    component: Home
   },
   {
-    path: '/helloworld',
-    name: 'HelloWorld',
-    component: HelloWorld
+    path: '/add',
+    name: 'add',
+    component: Add
   },
   // Ruta de redirección por defecto
   {
